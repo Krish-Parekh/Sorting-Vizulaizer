@@ -29,8 +29,13 @@ export default function Home() {
     if (requiresReset) {
       resetArrayAndAnimation();
       return;
-    } 
-    generateAnimationArray(selectedAlgorithm, isSorting, arrayToSort, runAnimation);
+    }
+    generateAnimationArray(
+      selectedAlgorithm,
+      isSorting,
+      arrayToSort,
+      runAnimation
+    );
   };
 
   return (
@@ -70,13 +75,13 @@ export default function Home() {
           </div>
 
           <div className="relative h-[calc(100vh-66px)] w-full">
-            <div className="absolute bottom-[32px] w-full mx-auto left-0 right-0 flex justify-center items-end">
+            <div className="absolute bottom-[32px] w-full mx-auto left-0 right-0 flex justify-center items-end gap-x-2">
               {arrayToSort.map((value, index) => (
                 <div
                   key={index}
-                  className="array-line relative w-1 mx-0.5 shadow-lg opacity-70 rounded-lg default-line-color"
+                  className="array-line relative w-10 mx-0.5 shadow-lg opacity-70 rounded-lg default-line-color flex items-center justify-center"
                   style={{ height: `${value}px` }}
-                ></div>
+                />
               ))}
             </div>
           </div>

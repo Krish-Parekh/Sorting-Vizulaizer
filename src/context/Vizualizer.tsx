@@ -58,7 +58,7 @@ export const SortingAlgorithmProvider = ({
     if (!contentContainer) return;
     const contentContainerWidth = contentContainer.clientWidth;
     const tempArray: number[] = [];
-    const numLines = contentContainerWidth / 8;
+    const numLines = contentContainerWidth / 48;
     const containerHeight = window.innerHeight;
     const maxLineHeight = Math.max(containerHeight - 420, 100);
     for (let i = 0; i < numLines; i++) {
@@ -69,7 +69,7 @@ export const SortingAlgorithmProvider = ({
     setIsSorting(false);
 
     const highestId = window.setTimeout(() => {
-      for(let i = highestId; i >= 0; i--) {
+      for (let i = highestId; i >= 0; i--) {
         window.clearTimeout(i);
       }
     }, 0);
@@ -93,7 +93,6 @@ export const SortingAlgorithmProvider = ({
     const arrayLines = document.getElementsByClassName(
       "array-line"
     ) as HTMLCollectionOf<HTMLElement>;
-    console.log("Array Lines ", arrayLines);
 
     const updateClassList = (
       indexes: number[],
@@ -106,7 +105,10 @@ export const SortingAlgorithmProvider = ({
       });
     };
 
-    const updateHeightValue = (lineIndex: number, newHeight: number | undefined) => {
+    const updateHeightValue = (
+      lineIndex: number,
+      newHeight: number | undefined
+    ) => {
       if (newHeight === undefined) return;
       arrayLines[lineIndex].style.height = `${newHeight}px`;
     };

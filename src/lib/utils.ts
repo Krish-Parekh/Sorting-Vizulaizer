@@ -4,9 +4,10 @@ import { generateSelectionSortAnimationArray } from "@/algorithms/selectionSort"
 import { generateQuickSortAnimationArray } from "@/algorithms/quickSort";
 import { generateInsertionSortAnimationArray } from "@/algorithms/insertionSort";
 import { generateMergeSortAnimationArray } from "@/algorithms/mergeSort";
+import { generateShellSortAnimationArray } from "@/algorithms/shellSort";
 
-export const MIN_ANIMATION_SPEED = 100;
-export const MAX_ANIMATION_SPEED = 400;
+export const MIN_ANIMATION_SPEED = 5;
+export const MAX_ANIMATION_SPEED = 300;
 
 export function generateRandomNumberFromInterval(
   min: number,
@@ -21,6 +22,7 @@ export const algorithmOptions = [
   { label: "Merge", value: "merge" },
   { label: "Insertion", value: "insertion" },
   { label: "Selection", value: "selection" },
+  { label: "Shell",  value: "shell" }
 ];
 
 export function generateAnimationArray(
@@ -41,6 +43,8 @@ export function generateAnimationArray(
       return generateMergeSortAnimationArray(isSorting, array, runAnimation);
     case "selection": 
       return generateSelectionSortAnimationArray(isSorting, array, runAnimation);
+    case "shell": 
+    return generateShellSortAnimationArray(isSorting, array, runAnimation);
     default:
       return;
   }

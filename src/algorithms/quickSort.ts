@@ -30,7 +30,7 @@ function partition(
   return j;
 }
 
-function runQuickort(
+function runQuicksort(
   array: number[],
   begin: number,
   finish: number,
@@ -38,8 +38,8 @@ function runQuickort(
 ) {
   if (begin < finish) {
     const part = partition(array, begin, finish, animations);
-    runQuickort(array, begin, part - 1, animations);
-    runQuickort(array, part + 1, finish, animations);
+    runQuicksort(array, begin, part - 1, animations);
+    runQuicksort(array, part + 1, finish, animations);
   }
 }
 
@@ -53,6 +53,6 @@ export function generateQuickSortAnimationArray(
 
   const animations: AnimationArrayType = [];
   const auxiliaryArray = array.slice();
-  runQuickort(auxiliaryArray, 0, array.length - 1, animations);
+  runQuicksort(auxiliaryArray, 0, array.length - 1, animations);
   runAnimation(animations);
 }

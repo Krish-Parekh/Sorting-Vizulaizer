@@ -23,7 +23,6 @@ export function generateBubbleSortAnimationArray(
 
   const animations: AnimationArrayType = [];
   const auxiliaryArray = array.slice();
-  console.log("Animations ", animations);
   runBubbleSort(auxiliaryArray, animations);
   runAnimation(animations);
 }
