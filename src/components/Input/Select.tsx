@@ -1,11 +1,10 @@
 import { SelectOptionsType } from "@/lib/types";
 import React from "react";
-
 interface ISelectProps {
-    options: SelectOptionsType[];
-    defaultValue: string;
-    onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-    isDisabled?: boolean;
+  options: SelectOptionsType[];
+  defaultValue: string;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  isDisabled?: boolean;
 }
 
 export const Select = ({

@@ -4,7 +4,6 @@ import { Slider } from "@/components/Input/Slider";
 import { useSortingAlgorithmContext } from "@/context/Vizualizer";
 import { SortingAlgorithmType } from "@/lib/types";
 import { algorithmOptions, generateAnimationArray } from "@/lib/utils";
-import { useEffect } from "react";
 import { FaPlayCircle } from "react-icons/fa";
 import { RxReset } from "react-icons/rx";
 
@@ -43,10 +42,10 @@ export default function Home() {
       <div className="flex h-full justify-center">
         <div
           id="content-container"
-          className="flex max-w-[1020px] w-full flex-col lg:px-0 px-4"
+          className="flex max-w-[1440px] w-full flex-col lg:px-0 px-4"
         >
           <div className="h-[66px] relative flex items-center justify-between w-full ">
-            <h1 className="text-gray-300 text-2xl font-light hidden md:flex">
+            <h1 className="text-gray-300 text-2xl font-medium hidden md:flex">
               Sorting Vizualizer
             </h1>
             <div className="flex items-center justify-center gap-4">

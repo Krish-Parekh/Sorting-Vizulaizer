@@ -12,7 +12,7 @@ interface ISliderProps {
 export const Slider = ({
   min = MIN_ANIMATION_SPEED,
   max = MAX_ANIMATION_SPEED,
-  step = 10,
+  step = 1,
   value,
   handleChange,
   isDisabled = false,

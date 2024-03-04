@@ -6,8 +6,8 @@ import { generateInsertionSortAnimationArray } from "@/algorithms/insertionSort"
 import { generateMergeSortAnimationArray } from "@/algorithms/mergeSort";
 import { generateShellSortAnimationArray } from "@/algorithms/shellSort";
 
-export const MIN_ANIMATION_SPEED = 5;
-export const MAX_ANIMATION_SPEED = 300;
+export const MIN_ANIMATION_SPEED = 1;
+export const MAX_ANIMATION_SPEED = 100;
 
 export function generateRandomNumberFromInterval(
   min: number,
