@@ -13,7 +13,7 @@ export function generateRandomNumberFromInterval(
   min: number,
   max: number
 ): number {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  return Math.ceil(Math.random() * (max - min + 1) + min);
 }
 
 export const algorithmOptions = [
